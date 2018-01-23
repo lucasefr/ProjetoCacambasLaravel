@@ -2,7 +2,7 @@
 @section('conteudo')
 <div class="row">
 		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-			<h3>Editar Usuarios: {{ $usuarios->nome }}</h3>
+			<h3>Editar Usuarios: {{ $usuarios->name }}</h3>
 			@if (count($errors)>0)
 			<div class="alert alert-danger">
 				<ul>
@@ -13,34 +13,67 @@
 			</div>
 			@endif
 
-			{!!Form::model($usuarios, ['method'=>'PATCH', 'route'=>['usuarios.update', $usuarios->idUsuarios]])!!}
+			{!!Form::model($usuarios, ['method'=>'PATCH', 'route'=>['usuarios.update', $usuarios->id]])!!}
 			{{Form::token()}}
 
-            <div class="form-group">
-            	<label for="nome">Nome</label>
-            	<input type="text" name="nome" class="form-control" 
-            	value="{{ $usuarios->nome }}"
-            	placeholder="Nome...">
-            </div>
-
-            <div class="form-group">
-            	<label for="email">Email</label>
-            	<input type="text" name="email" class="form-control" 
-            	value="{{ $usuarios->email }}"
-            	placeholder="Email...">
-            </div>
-
-            <div class="form-group">
-            	<label for="senha">Senha</label>
-            	<input type="password" name="senha" class="form-control" 
-            	value="{{ $usuarios->senha }}"
-            	placeholder="Senha...">
-            </div>
-            
-            <div class="form-group">
-            	<button class="btn btn-primary" type="submit">Salvar</button>
-            	<a href="usuarios"><button class="btn btn-danger">  Canccelar</button></a>
-            </div>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				<div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
+					<label for="name" class="col-md-4 control-label">Nome</label>
+		
+					<div class="col-md-6">
+						<input id="name" type="text" class="form-control" name="name" value="{{ old('name') }}" required autofocus>
+		
+						@if ($errors->has('name'))
+							<span class="help-block">
+								<strong>{{ $errors->first('name') }}</strong>
+							</span>
+						@endif
+					</div>
+				</div>
+		
+				<div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+					<label for="email" class="col-md-4 control-label">E-Mail</label>
+		
+					<div class="col-md-6">
+						<input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required>
+		
+						@if ($errors->has('email'))
+							<span class="help-block">
+								<strong>{{ $errors->first('email') }}</strong>
+							</span>
+						@endif
+					</div>
+				</div>
+		
+				<div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
+					<label for="password" class="col-md-4 control-label">Password</label>
+		
+					<div class="col-md-6">
+						<input id="password" type="password" class="form-control" name="password" required>
+		
+						@if ($errors->has('password'))
+							<span class="help-block">
+								<strong>{{ $errors->first('password') }}</strong>
+							</span>
+						@endif
+					</div>
+				</div>
+		
+				<div class="form-group">
+					<label for="password-confirm" class="col-md-4 control-label">Confirme o Password</label>
+		
+					<div class="col-md-6">
+						<input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
+					</div>
+				</div>
+	
+			</div>
+			
+		   
+			<div class="form-group">
+				<button class="btn btn-primary" type="submit">Salvar</button>
+				<button class="btn btn-danger" type="reset">Cancelar</button>
+			</div>
 
 			{!!Form::close()!!}		
             

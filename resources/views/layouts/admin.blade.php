@@ -54,9 +54,7 @@
                   <li class="user-header">
                     
                     <p>
-                      <a href="https://github.com/lucasefr" target="_blank" style="color:#white">www.github.com/lucasefr</a>
-                      
-                      
+                      www.github.com/lucasefr
                     </p>
                   </li>
                   
