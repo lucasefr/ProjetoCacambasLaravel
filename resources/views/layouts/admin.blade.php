@@ -54,16 +54,19 @@
                   <li class="user-header">
                     
                     <p>
-                      www.github.com/lucasefr
+                      <a href="https://github.com/lucasefr" target="_blank" style="color:#white">www.github.com/lucasefr</a>
+                      
                       
                     </p>
                   </li>
                   
                   <!-- Menu Footer-->
                   <li class="user-footer">
-                    
+                    <div>
+                        <a href="https://github.com/lucasefr" target="_blank" style="color:#white">www.github.com/lucasefr</a>
+                    </div>
                     <div class="pull-right">
-                      <a href="#" class="btn btn-default btn-flat">Fechar</a>
+                      <a href="{{url('/logout')}}" class="btn btn-default btn-flat">Fechar</a>
                     </div>
                   </li>
                 </ul>
@@ -92,7 +95,7 @@
               </a>
               <ul class="treeview-menu">
                 <li><a href="/clientes"><i class="fa fa-circle-o"></i> Clientes</a></li>
-                <li><a href="/estoque/categoria"><i class="fa fa-circle-o"></i> Categorias</a></li>
+                <!--<li><a href="#"><i class="fa fa-circle-o"></i> Categorias</a></li>-->
               </ul>
             </li>
             
@@ -103,8 +106,8 @@
                  <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
-                <li><a href="compras/entrada"><i class="fa fa-circle-o"></i> Entradas</a></li>
-                <li><a href="compras/fornecedor"><i class="fa fa-circle-o"></i> Fornecedores</a></li>
+                <li><a href="#"><i class="fa fa-circle-o"></i> Entradas</a></li>
+                <li><a href="#"><i class="fa fa-circle-o"></i> Fornecedores</a></li>
               </ul>
             </li>
             <li class="treeview">
@@ -115,7 +118,7 @@
               </a>
               <ul class="treeview-menu">
                 <li><a href="/cacambas"><i class="fa fa-circle-o"></i> Caçambas</a></li>
-                <li><a href="/venda/cliente"><i class="fa fa-circle-o"></i> Pedidos</a></li>
+                <li><a href="#"><i class="fa fa-circle-o"></i> Pedidos</a></li>
               </ul>
             </li>
                        
@@ -193,7 +196,7 @@
         <div class="pull-right hidden-xs">
           <b>Versão</b> Larave 5.4.0
         </div>
-        <strong>Copyright &copy; 2015-2020 <a href="lucasefr@gmail.com">Soft</a>.</strong> Todos os direitos reservados.
+        <strong>Copyright &copy; 2015-2020 <a href="https://github.com/lucasefr">Soft</a>.</strong> Todos os direitos reservados.
       </footer>
 
       

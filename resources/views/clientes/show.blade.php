@@ -81,11 +81,7 @@
 				<label for="nome">Complemento:</label>
             	<label for="nome">{{ $clientes->Complemento }}</label>
             </div>
-			@foreach ($clientes as $cli)
-				
-				
-                
-			@endforeach
+			
 			<div class="form-group">
 				<a href="{{URL::action('ClientesController@edit',$clientes->idClientes)}}"><button class="btn btn-info">Editar</button></a>            
 				

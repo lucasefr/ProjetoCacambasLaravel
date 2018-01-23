@@ -14,7 +14,8 @@ class ClientesController extends Controller
 {
     //
     public function __construct(){
-    	//
+        //
+        $this->middleware('auth');
     }
 
     public function index(Request $request){
@@ -94,7 +95,8 @@ class ClientesController extends Controller
 
     public function show($id){
     	return view("clientes.show", 
-    		["clientes"=>Clientes::findOrFail($id)]);
+            ["clientes"=>Clientes::findOrFail($id)]);
+            
     }
 
     public function edit($id){

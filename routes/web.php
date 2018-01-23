@@ -12,9 +12,16 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth/login');
 });
 
 Route::resource('cacambas', 'CacambasController');
 Route::resource('usuarios', 'UsuariosController');
 Route::resource('clientes', 'ClientesController');
+
+Route::auth();
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/logout', 'Auth\LoginController@logout');
