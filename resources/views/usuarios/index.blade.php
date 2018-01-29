@@ -16,18 +16,18 @@
 					<th>Nome</th>
                     <th>Email</th>
 					
-					<th>Opções</th>
+					<!--<th>Opções</th>-->
 				</thead>
                @foreach ($usuarios as $users)
 				<tr>
 					<td>{{ $users->id}}</td>
 					<td>{{ $users->name}}</td>
 					<td>{{ $users->email}}</td>
-					<td id="salvar">
-						<a href="{{URL::action('UsuariosController@edit',$users->id)}}"><button class="btn btn-info">Editar</button></a>
-                         <a href="#" data-target="#modal-delete-{{$users->id}}" data-toggle="modal"><button class="btn btn-danger">Excluir</button></a>
+					<!--<td id="salvar">
+						<<a href="{{URL::action('UsuariosController@edit',$users->id)}}"><button class="btn btn-info">Editar</button></a>
+                        <a href="#" data-target="#modal-delete-{{$users->id}}" data-toggle="modal"><button class="btn btn-danger">Excluir</button></a>
 						 
-					</td>
+					</td>-->
 				</tr>
 				@include('usuarios.modal')
 				@endforeach
